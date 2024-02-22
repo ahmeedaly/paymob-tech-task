@@ -1,0 +1,3 @@
+Main-Class: com.devopshint.app.App
+
+
