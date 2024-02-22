@@ -9,4 +9,4 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar /app/my-app.jar
 
-CMD ["java", "-jar", "my-app.jar"]
+CMD ["sh", "-c", "java -jar my-app.jar && sleep 300"]
