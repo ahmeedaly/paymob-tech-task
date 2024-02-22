@@ -25,8 +25,8 @@ The CI/CD pipeline involves the following steps:
 All containers are deployed inside a custom-bridge network so that all containers can reference & communicate with each other using their corresponding names to avoid hassle of\
 managing and changing IP addresses since containers are ephemeral and meant to be destroyed
 
-Some Jenkins plugins are installed in order to leverge current archeticture:\
-   - sonarqube scanner plugin
+Some Jenkins plugins are installed in order to leverge current archeticture:
+   - Sonarqube scanner plugin
    - GitHub plugin
    - Maven plugin
 
