@@ -1,4 +1,4 @@
-![Lab Architecture](https://github.com/ahmeedaly/paymob-tech-task/blob/main/LabInfra.jpg?raw=true)
+![Lab Architecture](https://github.com/ahmeedaly/paymob-tech-task/blob/main/LabInfra.jpg?raw=true "Lab Architecture")
 
 # Paymob Technical Task
 
