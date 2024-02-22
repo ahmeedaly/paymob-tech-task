@@ -1,5 +1,6 @@
 Jenkinsfile
 target/
+vars/
 LabInfra.jpg
 README.md
 build-deploy.yml
