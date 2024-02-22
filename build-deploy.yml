@@ -4,33 +4,49 @@
     project_dir: /home/ec2-user/paymob-tech-task
     dest_project_dir: /home/ec2-user
     image_name: paymob-java-app
+    ecr_reg: 131905481548.dkr.ecr.us-east-1.amazonaws.com
+    ecr_repo: paymob-tech-task
+    aws_region:  us-east-1
+
   remote_user: ec2-user
   tasks:
     - name: Copy pipeline project dir to docker host
-      #This line is added during debugging steps so that 
-      #it can be skipped using "--skip-tags" argument 
+
+      #This line is added during debugging steps so that it can be skipped using "--skip-tags" argument
       tags:
         - skip_this_task
       copy:
         src: "{{ project_dir }}"
         dest: "{{ dest_project_dir }}"
-    - name: Build Docker image
+
+    - name: Authenticate to ECR
+      ansible.builtin.shell: aws ecr get-login-password --region "{{ aws_region }}" | docker login --username AWS --password-stdin "{{ ecr_reg }}"
+
+    - name: Create ECR Repo
+      community.aws.ecs_ecr:
+        name: "{{ ecr_repo }}"
+        region: "{{ aws_region }}"
+
+    - name: Build & Push Docker image
       community.docker.docker_image:
-        name: "{{ image_name }}"
-        build: 
+        name: "{{ ecr_reg }}/{{ ecr_repo}}"
+        build:
           path: "{{ project_dir }}"
+        tag: latest
         source: build
+        push: true
+
     - name: Create Docker Container
       community.docker.docker_container:
         name: "{{ image_name }}"
-        image: "{{ image_name }}"
+        image: "{{ ecr_reg }}/{{ ecr_repo}}"
         state: started
       notify:
         - Capture container creation1
         - Capture container creation2
         - Output list of container creations
   
-#Added in order to prove that containers are created newly using pipeline 
+  #Added in order to prove that containers are created newly using pipeline 
   handlers:
     - name: Capture container creation1
       ansible.builtin.command: docker ps -a --format "table {{'{{'}}.Names{{'}}'}}\t{{'{{'}}.CreatedAt{{'}}'}}"
