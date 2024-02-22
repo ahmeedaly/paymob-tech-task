@@ -20,7 +20,18 @@ The CI/CD pipeline involves the following steps:
     - Creating a CI/CD job in Jenkins to:
     - Build the code using Ansible
     - Deploy it on Docker containers
-    
+
+All containers are deployed inside a custom-bridge network so that all containers can reference & communicate\
+with each other using their corresponding names to avoid hassle of managing and changing IP addresses since\
+containers are ephemeral and meant to be destroyed
+
+Some Jenkins plugins are installed in order to leverge current archeticture:\
+   - sonarqube scanner
+   - GitHub plugin
+   - Maven 
+
+
+
 This Setup is implemented using EC2 Instances on AWS
 
 ```bash
