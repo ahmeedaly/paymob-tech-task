@@ -7,6 +7,8 @@
   remote_user: ec2-user
   tasks:
     - name: Copy pipeline project dir to docker host
+      #This line is added during debugging steps so that 
+      #it can be skipped using "--skip-tags" argument 
       tags:
         - skip_this_task
       copy:
@@ -28,7 +30,7 @@
         - Capture container creation2
         - Output list of container creations
   
-
+#Added in order to prove that containers are created newly using pipeline 
   handlers:
     - name: Capture container creation1
       ansible.builtin.command: docker ps -a --format "table {{'{{'}}.Names{{'}}'}}\t{{'{{'}}.CreatedAt{{'}}'}}"
