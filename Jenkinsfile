@@ -18,7 +18,7 @@
               script {
 		 sh '''
 			scp -o StrictHostKeyChecking=no -r /var/jenkins_home/workspace/paymob-tech-task ec2-user@172.31.20.245:/home/ec2-user
-			ssh -o StrictHostKeyChecking=no ec2-user@172.31.20.245 'ansible-playbook -i hosts build-deploy.yml'
+			ssh -o StrictHostKeyChecking=no ec2-user@172.31.20.245 'cd ansible-deploy; ansible-playbook -i hosts build-deploy.yml'
 		'''
               }
             }
