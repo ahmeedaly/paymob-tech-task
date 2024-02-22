@@ -1,7 +1,8 @@
 # Paymob Technical Task
 
-CI/CD with GitHub, Jenkins, Maven, Ansible and Docker.
-This repository contains the necessary files and code to set up a CI/CD pipeline using GitHub, Jenkins, Maven, Ansible, and Docker. The pipeline includes setting up an Ansible server, integrating a Docker host with Ansible, creating Ansible playbooks for building Docker images and containers, and integrating Ansible with Jenkins for continuous integration and continuous deployment (CI/CD).
+CI/CD with GitHub, Jenkins, Maven, Ansible and Docker.\
+This repository contains the necessary files and code to set up a CI/CD pipeline using GitHub, Jenkins, Maven, Ansible, and Docker.\
+The pipeline includes setting up an Ansible server, integrating a Docker host with Ansible, creating Ansible playbooks for building Docker images and containers, and integrating Ansible with Jenkins for continuous integration and continuous deployment (CI/CD).
 
 
 ## CI/CD Setup
