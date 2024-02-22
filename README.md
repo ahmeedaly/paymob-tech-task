@@ -9,7 +9,7 @@ This repository contains the necessary files and code to set up a CI/CD pipeline
 The pipeline includes setting up an Ansible server, integrating a Docker host with Ansible, creating Ansible playbooks for building Docker images and containers, and integrating Ansible with Jenkins for continuous integration and continuous deployment (CI/CD).
 
 
-## CI/CD Setup
+## CI/CD Architecture
 
 The CI/CD pipeline involves the following steps:
 
@@ -39,6 +39,8 @@ Some Jenkins plugins are installed in order to leverge current archeticture:
 
 
 
+
+## CI/CD Setup
 
 ```bash
 git clone https://github.com/ahmeedaly/paymob-tech-task.git
