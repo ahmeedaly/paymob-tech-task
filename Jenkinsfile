@@ -15,9 +15,9 @@
 	  stage('Execute SSH Commands') {
 	    agent any
             steps {
-                script {
-			ssh ec2-user@172.31.29.59 'sudo docker images'
-                }
+              script {
+		 sh "ssh ec2-user@172.31.29.59 'sudo docker images'"
+              }
             }
           }
         }
