@@ -1,2 +1,6 @@
 Jenkinsfile
 target/
+LabInfra.jpg
+README.md
+build-deploy.yml
+docker-compose.yml
