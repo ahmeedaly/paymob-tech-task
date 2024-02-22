@@ -16,7 +16,7 @@
 	    agent any
             steps {
               script {
-		 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.29.59 'sudo docker images'"
+		 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.20.245 'scp -r /var/jenkins_home/workspace/paymob-tech-task ec2-user@172.31.20.245:/home/ec2-user'"
               }
             }
           }
