@@ -1,0 +1,6 @@
+project_dir: /home/ec2-user/paymob-tech-task
+dest_project_dir: /home/ec2-user
+image_name: paymob-java-app
+ecr_reg: 131905481548.dkr.ecr.us-east-1.amazonaws.com
+ecr_repo: paymob-tech-task
+aws_region:  us-east-1
