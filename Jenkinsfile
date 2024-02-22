@@ -16,7 +16,7 @@
 	    agent any
             steps {
               script {
-		 sh "ssh ec2-user@172.31.29.59 'sudo docker images'"
+		 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.29.59 'sudo docker images'"
               }
             }
           }
