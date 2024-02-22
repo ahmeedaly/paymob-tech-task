@@ -14,7 +14,7 @@ The pipeline includes setting up an Ansible server, integrating a Docker host wi
 The CI/CD Architecture involves the following steps:
 - Setting up an Ansible server
 - Integrating a Docker host with Ansible
-- Creating Ansible playbooks to:
+- Creating Ansible playbook to:
      - Authenticate to **AWS Private Elastic Container Registry**
      - Create **ECR Repository**
      - Build, tag & Push Docker image to **Private Repo**
