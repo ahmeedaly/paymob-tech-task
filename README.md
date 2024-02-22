@@ -1,3 +1,5 @@
+![Lab Architecture](https://github.com/ahmeedaly/paymob-tech-task/blob/main/LabInfra.jpg?raw=true)
+
 # Paymob Technical Task
 
 CI/CD with GitHub, Jenkins, Maven, Ansible and Docker.\
