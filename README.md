@@ -68,9 +68,26 @@ sudo ulimit -u 8192
 To ensure proper functionality of the Ansible playbook, it is imperative that the remote host meets the following prerequisites:
 
 1. **Python Version Compatibility**: The remote host should have Python version 3.9 or higher installed.
-   
-2. **Ansible AWS Module**: The Ansible AWS module must be installed on the ansible host.
-   
-3. **AWS SDK Dependencies**: Additionally, remote host should have both `boto3` and `botocore` packages installed to enable the utilization of the AWS module.
 
+2. **pip3** package manager must be installed on ansible host to facilitate the installation of required Python and Ansible packages.
+   ```
+   $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+   $ python3 get-pip.py --user
+    ```
+3. **Ansible Version Requirement**: Ansible version 2.13 or higher must be installed on ansible host host.
+   ```
+   $ python3 -m pip install --user ansible-core==2.13.1
+   ```
+4. **Ansible AWS Module**: The Ansible AWS module must be installed on the ansible host.
+   ```
+   $ ansible-galaxy collection install amazon.aws
+   ```
+
+5. **AWS SDK Dependencies**: Additionally, remote host should have both `boto3` and `botocore` packages installed to enable the utilization of the AWS module.
+   ```
+   $ python3 -m pip install boto3
+   $ python3 -m pip install botocore
+   ```
+\
 These prerequisites are crucial for the seamless execution of the Ansible playbook and interaction with AWS services.
+
