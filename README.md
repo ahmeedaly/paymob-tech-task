@@ -53,7 +53,7 @@ docker-compose up -d
 ```
 
 
-## IMPORTANT NOTE
+## IMPORTANT NOTES
 For Sonarqube container to function smoothly, Docker host configuration **MUST** comply with the Elasticsearch production mode requirements and File Descriptors configuration.\
 This can be done by executing following commands on Docker host:
 
@@ -63,3 +63,13 @@ sudo sysctl -w fs.file-max=131072
 sudo ulimit -n 131072
 sudo ulimit -u 8192
 ```
+
+To ensure proper functionality of the Ansible playbook, it is imperative that the remote host meets the following prerequisites:
+
+1. **Python Version Compatibility**: The remote host should have Python version 3.9 or higher installed.
+   
+2. **Ansible AWS Module**: The Ansible AWS module must be installed on the remote host.
+   
+3. **AWS SDK Dependencies**: Additionally, the remote host should have both `boto3` and `botocore` packages installed to enable the utilization of the AWS module.
+
+These prerequisites are crucial for the seamless execution of the Ansible playbook and interaction with AWS services.
