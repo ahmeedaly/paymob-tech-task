@@ -71,6 +71,6 @@ To ensure proper functionality of the Ansible playbook, it is imperative that th
    
 2. **Ansible AWS Module**: The Ansible AWS module must be installed on the ansible host.
    
-3. **AWS SDK Dependencies**: Additionally, ansible host should have both `boto3` and `botocore` packages installed to enable the utilization of the AWS module.
+3. **AWS SDK Dependencies**: Additionally, remote host should have both `boto3` and `botocore` packages installed to enable the utilization of the AWS module.
 
 These prerequisites are crucial for the seamless execution of the Ansible playbook and interaction with AWS services.
