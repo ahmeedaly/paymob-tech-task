@@ -54,7 +54,7 @@ docker-compose up -d
 
 
 ## IMPORTANT NOTES
-1. For Sonarqube container to function smoothly, Docker host configuration **MUST** comply with the Elasticsearch production mode requirements and File Descriptors configuration.\
+For Sonarqube container to function smoothly, Docker host configuration **MUST** comply with the Elasticsearch production mode requirements and File Descriptors configuration.\
 This can be done by executing following commands on Docker host:
 
 ```
@@ -64,7 +64,8 @@ sudo ulimit -n 131072
 sudo ulimit -u 8192
 ```
 
-2. To ensure proper functionality of the Ansible playbook, it is imperative that the remote host meets the following prerequisites:
+
+To ensure proper functionality of the Ansible playbook, it is imperative that the remote host meets the following prerequisites:
 
 1. **Python Version Compatibility**: The remote host should have Python version 3.9 or higher installed.
    
