@@ -74,7 +74,7 @@ To ensure proper functionality of the Ansible playbook, it is imperative that th
    $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
    $ python3 get-pip.py --user
     ```
-3. **Ansible Version Requirement**: Ansible version 2.13 or higher must be installed on ansible host host.
+3. **Ansible Version Requirement**: Ansible version 2.13 or higher must be installed on ansible host.
    ```
    $ python3 -m pip install --user ansible-core==2.13.1
    ```
